@@ -1,5 +1,6 @@
 package com.amigoscode;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class SoftwareEngineerController {
 
     @PostMapping
     public void addNewSoftwareEngineer(
-            @RequestBody SoftwareEngineer softwareEngineer){
+             @Valid @RequestBody SoftwareEngineer softwareEngineer){
         softwareEngineerService.insertSoftwareEngineer(softwareEngineer);
     }
 }

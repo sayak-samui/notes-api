@@ -23,7 +23,7 @@ public class SoftwareEngineerService {
 
     public SoftwareEngineer getSoftwareEngineerById(Integer id) {
         return softwareEngineerRepository.findById(id)
-                .orElseThrow(() ->  new IllegalStateException(
+                .orElseThrow(() ->  new SoftwareEngineerNotFoundException("Software Engineer with id"+
                         id+ " not found"));
     }
 }
